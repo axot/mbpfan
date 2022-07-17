@@ -3,7 +3,8 @@ version: '3'
 services:
   mbpfan:
     privileged: true
-    image: bplein/mbpfan:latest
+    image: mbpfan:latest
+    build: .
     container_name: mbpfan
     hostname: mbpfan
     restart: unless-stopped
