@@ -6,4 +6,6 @@ RUN apt-get update ;\
     apt-get -qqy clean autoclean > /dev/null ;\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/log/*
 
+COPY etc/mbpfan.conf /etc/mbpfan.conf
+
 ENTRYPOINT ["mbpfan", "-f", "-v"]
